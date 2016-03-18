@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <title>贪吃蛇</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="css/jquery-snake.css">
+  <script src="js/jQuery.js"></script>
+  <script src="js/touch-0.2.14.min.js"></script>
+  <script src="js/jquery-snake.js"></script>
+</head>
+<body>
+  <input type="button" value="开 始 游 戏" id="btn" onClick="btnStart()" class="btn"/>
+  <input type="button" value="重 新 开 始" id="btn1" onClick="btnchong()" class="btn"/>
+
+  <div id="resize">
+      <h3>游戏说明：</h3>
+      <br/>
+      <p>点击开始游戏，游戏开
+          始，按电脑上下左右键移动贪吃蛇去吃食物，
+      <br/>  贪吃蛇碰到边界，和碰到自身，游戏结束！！</p>
+  </div>
+  <div id="Name">
+      <h3>贪 吃 蛇</h3>
+  </div>
+  <h2>Eating &nbsp; Snack &nbsp; Game</h2>
+  
+  <div id="score">
+      得分： <span id="score_one"></span>
+  </div>
+  <div id="snake">
+    
+  </div>
+  <div class="lose">小 伙！<br>撞 东 西 了 ！</div>
+  
+  
+</body>
+<script type="text/javascript">
+  var btnStart=function() {
+    $('#snake').snake();
+  }
+  var btnchong=function() {
+    $('#snake').snake();
+    $('.lose').css('display','none');
+  }
+  /*$('#btn1').click=function(){
+    alert(1)
+  }*/
+</script>
+</html>
